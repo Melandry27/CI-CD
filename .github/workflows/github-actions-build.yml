@@ -12,7 +12,9 @@ jobs:
       - name: Save cache
         uses: actions/cache@v4
         with:
-          path: node_modules
+          path: |
+            node_modules
+            /home/runner/.cache/Cypress
           key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-npm-
@@ -24,7 +26,9 @@ jobs:
       - name: Restore cache
         uses: actions/cache@v4
         with:
-          path: node_modules
+          path: |
+            node_modules
+            /home/runner/.cache/Cypress
           key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-npm-
