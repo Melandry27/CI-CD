@@ -33,5 +33,4 @@ jobs:
           key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-npm-
-      - name: Check out repository code
       - run: npm run e2e:headless
