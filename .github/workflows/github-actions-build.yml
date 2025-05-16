@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
-      - run: npm clean-install
+      - run: npm ci
       - name: Save cache
         uses: actions/cache@v4
         with:
