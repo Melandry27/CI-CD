@@ -7,5 +7,6 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
+      - run: npm install
       - run: npm run build
       - run: npm run e2e:headless
